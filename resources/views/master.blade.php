@@ -15,7 +15,7 @@
 <div id="page">
     <div id="header">
         <div>
-            <a href="index.html" class="logo"><img src="{{asset('asset/images/logo.png')}}" alt=""></a>
+            <a href="{{url('index')}}" class="logo"><img src="{{asset('asset/images/logo.png')}}" alt=""></a>
             <ul id="navigation">
                 <li class="selected">
                     <a href="{{url('index')}}">Home</a>
@@ -24,10 +24,10 @@
                     <a href="{{url('about')}}">About</a>
                 </li>
                 <li class="menu">
-                    <a href="{{url('projects')}}">Projects</a>
+                    <a href="{{url('project')}}">Projects</a>
                     <ul class="primary">
                         <li>
-                            <a href="proj1">proj 1</a>
+                            <a href="{{url('proj1')}}">proj 1</a>
                         </li>
                     </ul>
                 </li>
@@ -35,7 +35,7 @@
                     <a href="{{url('blog')}}">Blog</a>
                     <ul class="secondary">
                         <li>
-                            <a href="singlepost.html">Single post</a>
+                            <a href="{{url('singlepost')}}">Single post</a>
                         </li>
                     </ul>
                 </li>

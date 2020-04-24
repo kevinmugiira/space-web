@@ -24,3 +24,5 @@ Route::resource ('about','AboutController');
 Route::resource ('contact','ContactController');
 Route::resource ('blog','BlogController');
 Route::resource ('project','ProjectController');
+Route::resource ('singlepost','SinglepostController');
+Route::resource ('proj1','Proj1Controller');
