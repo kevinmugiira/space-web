@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('layout.masters')
 
 
 @section('content')
