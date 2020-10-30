@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+/*
 Route::resource ('master','MasterController');
 Route::resource ('index','IndexController');
 Route::resource ('about','AboutController');
@@ -26,3 +26,8 @@ Route::resource ('blog','BlogController');
 Route::resource ('project','ProjectController');
 Route::resource ('singlepost','SinglepostController');
 Route::resource ('proj1','Proj1Controller');
+Route::resource('throw','ThrowController');*/
+
+
+Route::get('contact','PagesController@contact');
+
