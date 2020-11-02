@@ -29,7 +29,10 @@ Route::resource ('proj1','Proj1Controller');
 Route::resource('throw','ThrowController');*/
 
 
-Route::get('contact','PagesController@contact');
-Route::get('blogs', 'BlogsController@index');
-Route::get('blogs/{id}','BlogsController@show');
+//Route::get('contact','PagesController@contact');
+//Route::get('blogs', 'BlogsController1@index');
+//Route::get('blogs', ['as' => 'blogs.index', 'uses' => 'BlogsController1@index']);
+//Route::get('blogs/{id}','BlogsController1@show');
+
+Route::resource('blogs', 'BlogsController');
 

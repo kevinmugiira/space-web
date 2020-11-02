@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Blogs;
-use Illuminate\Http\Request;
+use App\Http\Requests\BlogRequest;
+use Request;
 
 class BlogsController extends Controller
 {
@@ -14,9 +15,8 @@ class BlogsController extends Controller
      */
     public function index()
     {
-        $blog = Blogs::all();
-        return view('blogs/blogs', compact('blog'));
-
+        $blog = Blogs::latest()->get();
+        return view('blogs/blogs',compact('blog'));
     }
 
     /**
@@ -26,7 +26,7 @@ class BlogsController extends Controller
      */
     public function create()
     {
-        //
+        return view('blogs/create');
     }
 
     /**
@@ -35,9 +35,13 @@ class BlogsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BlogRequest $request)
     {
-        //
+        $input = Request::all();
+
+        Blog::create($input);
+
+        return redirect('blogs');
     }
 
     /**
@@ -49,7 +53,7 @@ class BlogsController extends Controller
     public function show($id)
     {
         $blogs = Blogs::findOrFail($id);
-        return view('blogs.show')->with('blogs', $blogs);
+        return view('blogs/show',compact('blogs'));
     }
 
     /**
@@ -70,7 +74,7 @@ class BlogsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         //
     }

@@ -9,11 +9,11 @@
 
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Blogs
+                <li class="active"><a href="{{routes('blogs.index')}}">Blogs
                     </a>
                 </li>
                 <li>
-                    <a href="#">Create</a>
+                    <a href="{{routes('blogs.create')}}">Create</a>
                 </li>
             </ul>
 
